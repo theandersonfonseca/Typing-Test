@@ -4,13 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste de Digitação</title>
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   </head>
   <body>
+    <h1 class="title">Teste de Digitação</h1>
+
+    <div class="test-container" data-test-container>
+      <p class="words" data-words>
+      </p>
+    </div>
+
+    <div class="input-container">
+      <input class="input" type="text" data-input>
+      <span class="timer" data-timer>01:00</span>
+    </div>
+
+    <div class="controls">
+      <select class="select" value="portuguese">
+        <option value="portuguese">Português</option>
+        <option value="english">Inglês</option>
+      </select>
+
+      <button class="button-minutes button-minutes--selected" data-button-minutes="1 minute">1 Minuto</button>
+      <button class="button-minutes" data-button-minutes="3 minutes">3 Minutos</button>
+      <button class="button-minutes" data-button-minutes="5 minutes">5 Minutos</button>
+
+      <button class="button-reset" data-button-reset>Resetar</button>
+    </div>
+
+    <div class="modal">
+      <div class="result" data-result>
+        <p class="result__text" data-result-text>
+          Você digitou <span class="result__wpm">54</span> palavras por minuto com uma precisão de <span class="result__accuracy">84%</span>.
+        </p>
+
+        <span class="result__close" data-close-modal>x</span>
+      </div>
+    </div>
   </body>
 </html>
