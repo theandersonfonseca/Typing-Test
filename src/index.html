@@ -21,25 +21,25 @@
     </div>
 
     <div class="controls">
-      <select class="select" value="portuguese">
+      <select class="select" value="portuguese" data-language>
         <option value="portuguese">Português</option>
         <option value="english">Inglês</option>
       </select>
 
-      <button class="button-minutes button-minutes--selected" data-button-minutes="1 minute">1 Minuto</button>
-      <button class="button-minutes" data-button-minutes="3 minutes">3 Minutos</button>
-      <button class="button-minutes" data-button-minutes="5 minutes">5 Minutos</button>
+      <button class="button-minutes button-minutes--selected" data-button-minutes="1">1 Minuto</button>
+      <button class="button-minutes" data-button-minutes="3">3 Minutos</button>
+      <button class="button-minutes" data-button-minutes="5">5 Minutos</button>
 
       <button class="button-reset" data-button-reset>Resetar</button>
     </div>
 
-    <div class="modal">
+    <div class="modal" data-modal>
       <div class="result" data-result>
-        <p class="result__text" data-result-text>
-          Você digitou <span class="result__wpm">54</span> palavras por minuto com uma precisão de <span class="result__accuracy">84%</span>.
+        <p class="result__text">
+          Você digitou corretamente <span class="result__wpm" data-wpm>0</span> palavras por minuto com uma precisão de <span class="result__accuracy" data-accuracy>0</span>.
         </p>
 
-        <span class="result__close" data-close-modal>x</span>
+        <span class="result__close">x</span>
       </div>
     </div>
   </body>
