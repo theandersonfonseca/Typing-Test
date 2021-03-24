@@ -1,1 +1,199 @@
 @use 'base' as *;
+
+.title {
+  font-size: 5rem;
+  font-family: 'Lobster', cursive;
+  letter-spacing: .5rem;
+  margin-top: 2rem;
+
+  @include for-size(phone-only) {
+    font-size: 3.5rem;
+  }
+}
+
+.test-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75rem;
+  max-width: 100%;
+  height: 15rem;
+  margin-top: 5rem;
+  padding: 1rem 1.5rem;
+  background: $clr-white;
+  border-radius: .4rem;
+}
+
+.words {
+  font-size: 2.2rem;
+  color: $clr-dark;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    margin-left: 1rem;
+  }
+
+  @include for-size(phone-only) {
+    font-size: 1.6rem;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    font-size: 2.6rem;
+  }
+}
+
+.input-container {
+  display: flex;
+  margin-top: 5rem;
+
+  @include for-size(phone-only) {
+    flex-wrap: wrap;
+  }
+}
+
+.input {
+  padding: 1rem 1.5rem;
+  border-radius: .4rem;
+  font-size: 2rem;
+  width: 30rem;
+  border: none;
+  outline: none;
+
+  @include for-size(phone-only) {
+    width: 15rem;
+  }
+}
+
+.timer {
+  margin-left: 6rem;
+  background: $clr-blue;
+  border-radius: .4rem;
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: 700;
+
+  @include for-size(phone-only) {
+    margin-left: 2rem;
+  }
+}
+
+.controls {
+  margin-top: 10rem;
+  display: flex;
+
+  @include for-size(phone-only) {
+    margin-top: 6rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & > * {
+    padding: .8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+
+    @include for-size(tablet-landscape-up) {
+      padding: 1rem 1.5rem;
+    }
+
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+
+      @include for-size(phone-only) {
+        margin-top: 1.5rem;
+      }
+
+      @include for-size(tablet-landscape-up) {
+        margin-left: 6rem;
+      }
+    }
+  }
+}
+
+.select {
+  background: $clr-gray;
+}
+
+.button-minutes {
+  &:not(:first-of-type) {
+    margin-left: 1.5rem;
+  }
+
+  &--selected {
+    background: $clr-green;
+    color: $clr-white;
+  }
+}
+
+.button-reset {
+  background: $clr-red;
+  color: $clr-white;
+}
+
+.button-minutes,
+.button-reset {
+  transition: .4s;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgba($clr-black, .6);
+  transition: .4s;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.result {
+  width: 85%;
+  padding: 3rem;
+  background: $clr-white;
+  color: $clr-dark;
+  border-radius: .4rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  @include for-size(tablet-landscape-up) {
+    width: 50%;
+  }
+
+  &__text {
+    font-size: 2.4rem;
+  }
+
+  &__wpm,
+  &__accuracy {
+    display: inline-block;
+    font-weight: 700;
+    color: $clr-blue;
+  }
+
+  &__close {
+    position: absolute;
+    top: -2rem;
+    right: -1rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $clr-red;
+    cursor: pointer;
+  }
+}

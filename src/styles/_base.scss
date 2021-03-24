@@ -3,6 +3,7 @@ $clr-green: #12ce37;
 $clr-red: #f11a16;
 $clr-blue: rgb(54, 112, 199);
 $clr-dark: #333;
+$clr-gray: rgb(192, 184, 184); 
 $clr-black: #000;
 $clr-white: #fff;
 
@@ -41,6 +42,7 @@ $clr-white: #fff;
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html,

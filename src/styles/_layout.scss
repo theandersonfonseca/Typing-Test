@@ -1,1 +1,12 @@
 @use 'base' as *;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: $clr-dark;
+  color: $clr-white;
+  text-align: center;
+}
